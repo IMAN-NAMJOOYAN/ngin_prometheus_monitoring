@@ -82,5 +82,3 @@ kubectl apply -f nginx-sm.yaml
 
 
 
-
-
