@@ -16,12 +16,12 @@
    -  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
    -  helm install my-kube-prometheus-stack prometheus-community/kube-prometheus-stack --version 48.3.1
 
-2- before install Nginx (Helm), edit default values for enabling nginx metrics.
+2- Before installing Nginx (Helm), edit the default values to enable nginx metrics.
 ```
 
 ![image](https://github.com/IMAN-NAMJOOYAN/nginx_prometheus_monitoring/assets/16554389/fc34e544-c685-46a7-b4cc-c55bf219b48a)
 
-*Note:* When enabling metrics, nginx metrics exposed by nginx exporter on port 9113. you can view metrics ans values on curl command or web browser.
+*NOTE:* nginx metrics are exposed by the nginx exporter on port 9113 when metrics are enabled. You can view the metrics and values in the curl command or in a web browser.
 
 ![image](https://github.com/IMAN-NAMJOOYAN/nginx_prometheus_monitoring/assets/16554389/a805d8b7-9b84-46d7-a4a2-d10585968551)
 
@@ -61,7 +61,7 @@ spec:
       app.kubernetes.io/instance: mynginx
       app.kubernetes.io/name: nginx
 ```
-*Note:* we run nginx deployment on "deafault" name space. you can deploy nginx on custom namespace.
+*Note:* We run the nginx deployment in the "default" namespace. You can deploy nginx to a custom namespace.
 ```
 4- apply ServiceMonitor.
 
